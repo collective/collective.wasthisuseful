@@ -3,6 +3,15 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.wasthisuseful">
 
+    <include package="plone.app.registry" />
+    <!-- Control panel -->
+    <browser:page
+        name="wasthisuseful-settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.WasThisUsefulSettingsControlPanel"
+        permission="cmf.ManagePortal"
+        />
+
   <browser:page
       for="Products.ATContentTypes.interfaces.document.IATDocument"
       name="usefulness-form"
