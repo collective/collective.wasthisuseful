@@ -18,7 +18,7 @@ class UsefulnessView(BrowserView):
         now = DateTime()
         useful_int = int(useful)
         vote = {
-            KEY_USEFUL: useful,
+            KEY_USEFUL: useful_int,
             KEY_COMMENT: comment,
             KEY_DATE: now,
             KEY_IP: self.request.getClientAddr(),

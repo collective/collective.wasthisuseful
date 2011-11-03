@@ -14,5 +14,3 @@ class UsefulnessManager(object):
 
     def setVotes(self, votes):
         IAnnotations(self.context)[STORAGE_KEY] = votes
-
-
