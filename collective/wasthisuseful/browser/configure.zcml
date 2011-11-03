@@ -3,12 +3,6 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.wasthisuseful">
 
-  <interface
-      interface=".interfaces.IThemeSpecific"
-      type="zope.publisher.interfaces.browser.IBrowserSkinType"
-      name="Was This Useful"
-      />
-
   <browser:page
       for="Products.ATContentTypes.interfaces.document.IATDocument"
       name="usefulness-form"
