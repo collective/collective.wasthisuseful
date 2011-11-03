@@ -1,0 +1,33 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.wasthisuseful">
+
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="Was This Useful"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.interfaces.document.IATDocument"
+      name="usefulness-form"
+      class=".views.UsefulnessView"
+      permission="zope2.View"
+      />
+
+  <browser:viewlet
+      name="collective.wasthisuseful.WasThisUseful"
+      for="Products.ATContentTypes.interfaces.document.IATDocument"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class=".viewlets.WasThisUsefulViewlet"
+      permission="zope2.View"
+      /> 
+
+  <browser:resourceDirectory
+      name="collective.wasthisuseful.javascripts"
+      directory="javascripts"
+      />
+
+</configure>
+

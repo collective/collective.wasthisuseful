@@ -1,0 +1,43 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.wasthisuseful">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <include package="plone.contentrules" />
+  <include package="plone.contentrules" file="meta.zcml" />
+
+  <include package=".browser" />
+  <include file="profiles.zcml" />
+  <i18n:registerTranslations directory="locales" />
+
+  <interface
+    interface=".event.IUsefulnessEvent"
+    type="plone.contentrules.rule.interfaces.IRuleEventType"
+    name="Usefulness rated"
+    />
+
+  <!-- Register handlers -->
+  <!-- Rule triggers -->
+  <subscriber
+      for=".event.IUsefulnessEvent"
+      handler=".handlers.usefulness_rated"
+      />
+
+  <!-- Register string substitutions in Content Rules' e-mail action -->
+  <adapter
+      for="Products.CMFCore.interfaces.IContentish"
+      provides="plone.stringinterp.interfaces.IStringSubstitution"
+      factory=".adapters.usefulnessRatingCommentSubstitution"
+      name="usefulness_comment"
+      />
+  <adapter
+      for="Products.CMFCore.interfaces.IContentish"
+      provides="plone.stringinterp.interfaces.IStringSubstitution"
+      factory=".adapters.usefulnessRatingValueSubstitution"
+      name="usefulness_value"
+      />
+ 
+</configure>

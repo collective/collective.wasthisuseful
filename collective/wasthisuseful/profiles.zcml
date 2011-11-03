@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.wasthisuseful">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Was This Useful"
+      directory="profiles/default"
+      description="Adds usefulness rating form, and an Event to use in a Content Rule"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure> 

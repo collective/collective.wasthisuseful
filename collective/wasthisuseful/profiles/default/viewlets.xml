@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object>
+  <order manager="plone.belowcontent" >
+    <viewlet name="collective.wasthisuseful.WasThisUseful" 
+        insert-before="*" />
+  </order>
+</object>
