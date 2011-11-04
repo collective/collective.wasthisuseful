@@ -28,6 +28,8 @@ To your `buildout.cfg`, add::
         ...
         collective.wasthisuseful
 
+After that, just install via the "Add-on" controlpanel.
+
 Usage
 =====
 
@@ -43,8 +45,7 @@ Select enabled types
 --------------------
 
 The settings form which enables you to select on which content types the
-viewlet is available can be found at `@@wasthisuseful-settings`. Type this
-after you site url.
+viewlet is available via the Plone control panel ("Site setup").
 
 To do
 =====
