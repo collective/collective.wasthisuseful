@@ -42,7 +42,6 @@ To do
 
 - Register viewlet, view and resources only for IThemeSpecific
 - Show number of ratings
-- Ability to select content-types on which rating is available
 - Ability to disable rating on one content item
 - Integrate with collective.contentratings_
 - Translate rating value ("Yes"/"No") in content rule e-mail

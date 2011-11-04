@@ -1,25 +1,29 @@
-<div id="useful"
-    i18n:domain="collective.wasthisuseful">
-  <form name="usefulness"
-      tal:attributes="
-        action string:${context/absolute_url}/@@usefulness-form;
-        "
-      method="POST"
-      id="usefulness-form"
-      >
-    <span i18n:translate="label_was_this_useful">
-      Was this information useful?
-    </span>
-    <input type="radio" name="useful" value="1" 
-        onclick="this.form.submit();" />
-    <span i18n:domain="plone" i18n:translate="">Yes</span>
-    <input type="radio" name="useful" value="0" />
-    <span i18n:domain="plone" i18n:translate="">No</span>
-    <span class="comments" style="display: none;">
-      <span i18n:translate="label_why">Why?</span>
-      <input type="text" name="comment" />
-      <input type="submit" name="Submit" value="Submit"
-          i18n:domain="plone" i18n:attributes="value" />
-    </span>
-  </form>
-</div>
+<tal:defineEnabled
+    tal:define="enabled view/enabled">
+  <div id="useful"
+      tal:condition="enabled"
+      i18n:domain="collective.wasthisuseful">
+    <form name="usefulness"
+        tal:attributes="
+          action string:${context/absolute_url}/@@usefulness-form;
+          "
+        method="POST"
+        id="usefulness-form"
+        >
+      <span i18n:translate="label_was_this_useful">
+        Was this information useful?
+      </span>
+      <input type="radio" name="useful" value="1" 
+          onclick="this.form.submit();" />
+      <span i18n:domain="plone" i18n:translate="">Yes</span>
+      <input type="radio" name="useful" value="0" />
+      <span i18n:domain="plone" i18n:translate="">No</span>
+      <span class="comments" style="display: none;">
+        <span i18n:translate="label_why">Why?</span>
+        <input type="text" name="comment" />
+        <input type="submit" name="Submit" value="Submit"
+            i18n:domain="plone" i18n:attributes="value" />
+      </span>
+    </form>
+  </div>
+</tal:defineEnabled>
