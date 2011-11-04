@@ -1,3 +1,4 @@
+from zope.annotation.interfaces import IAnnotations
 from zope.component import adapts 
  
 from Products.CMFCore.interfaces import IContentish
@@ -7,12 +8,10 @@ from plone.stringinterp.adapters import BaseSubstitution
 from plone.stringinterp.interfaces import IStringSubstitution 
 
 from collective.wasthisuseful import wasthisusefulMessageFactory as _
-from collective.wasthisuseful.config import KEY_USEFUL, KEY_COMMENT
-from collective.wasthisuseful.manager import UsefulnessManager
+from collective.wasthisuseful.config import KEY_USEFUL, KEY_COMMENT, \
+                                                                    STORAGE_KEY
 
 class usefulnessRatingCommentSubstitution(BaseSubstitution):
-    adapts(IContentish)
-
     category = PloneStringInterpMessageFactory(u'All Content')
     description = _(u'label_comment', default=u'Comment')
 
@@ -22,8 +21,6 @@ class usefulnessRatingCommentSubstitution(BaseSubstitution):
         return last_vote_comment
 
 class usefulnessRatingValueSubstitution(BaseSubstitution):
-    adapts(IContentish)
-
     category = PloneStringInterpMessageFactory(u'All Content')
     description = _(u'label_value', default=u'Rating')
 
@@ -35,3 +32,15 @@ class usefulnessRatingValueSubstitution(BaseSubstitution):
         else:
             value = 'No'
         return value
+
+class UsefulnessManager(object):
+    """See interfaces.py, IUsefulnessManager
+    """
+    def __init__(self, context):
+        self.context = context
+
+    def getVotes(self):
+        return IAnnotations(self.context).get(STORAGE_KEY, [])
+
+    def setVotes(self, votes):
+        IAnnotations(self.context)[STORAGE_KEY] = votes

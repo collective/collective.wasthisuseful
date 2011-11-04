@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-11-03 11:14+0000\n"
+"POT-Creation-Date: 2011-11-04 11:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,28 +17,50 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.wasthisuseful\n"
 
+#: ../browser/controlpanel.py:11
+msgid ""
+msgstr ""
+
+#: ../profiles/default/controlpanel.xml
+msgid "Usefulness Ratings"
+msgstr ""
+
+#: ../browser/controlpanel.py:10
+msgid "Was This Useful settings"
+msgstr ""
+
+#. Default: "For which content types shall we enable rating?"
+#: ../interfaces.py:31
+msgid "help_enabled_types"
+msgstr ""
+
 #. Default: "Comment"
-#: ../adapters.py:18
+#: ../adapters.py:16
 msgid "label_comment"
 msgstr ""
 
+#. Default: "Enabled types"
+#: ../interfaces.py:30
+msgid "label_enabled_types"
+msgstr ""
+
 #. Default: "Rating"
-#: ../adapters.py:29
+#: ../adapters.py:25
 msgid "label_value"
 msgstr ""
 
 #. Default: "Was this information useful?"
-#: ../browser/useful.pt:10
+#: ../browser/useful.pt:13
 msgid "label_was_this_useful"
 msgstr ""
 
 #. Default: "Why?"
-#: ../browser/useful.pt:19
+#: ../browser/useful.pt:22
 msgid "label_why"
 msgstr ""
 
 #. Default: "Thank you for voting!"
-#: ../browser/views.py:35
+#: ../browser/views.py:36
 msgid "message_thank_you"
 msgstr ""
 

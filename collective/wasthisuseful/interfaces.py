@@ -1,6 +1,5 @@
-from z3c.form import interfaces
 from zope import schema
-from zope.interface import Interface
+from zope.interface import Interface, implements
 from zope.i18nmessageid import MessageFactory
 
 from Products.Archetypes.interfaces.field import IStringField
@@ -10,6 +9,16 @@ from collective.wasthisuseful import wasthisusefulMessageFactory as _
 class IWasThisUsefulProductLayer(Interface):
     """Marker interface for browser layer
     """
+
+class IUsefulnessManager(Interface):
+    """Helper class to update votes
+    """
+    def getVotes():
+        """Get the list of all votes
+        """
+    def setVotes():
+        """Re-set the list of all votes
+        """
 
 class IWasThisUsefulSettings(Interface):
     """Global settings for "Was this useful". 

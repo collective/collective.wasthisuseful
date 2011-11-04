@@ -40,4 +40,11 @@
       name="usefulness_value"
       />
  
+  <!-- Adapt content to storage manager -->
+  <adapter
+      provides=".interfaces.IUsefulnessManager"
+      for="Products.CMFCore.interfaces.IContentish"
+      factory=".adapters.UsefulnessManager"
+      />
+
 </configure>

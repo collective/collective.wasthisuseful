@@ -53,6 +53,5 @@ To do
 - Ability to disable rating on one content item
 - Integrate with collective.contentratings_
 - Translate rating value ("Yes"/"No") in content rule e-mail
-- Link to `@@wasthisuseful-settings`
 
 .. _collective.contentratings: http://pypi.python.org/pypi/plone.contentratings

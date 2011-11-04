@@ -38,5 +38,11 @@
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       />
 
+  <browser:resourceDirectory
+      name="collective.wasthisuseful.images"
+      directory="images"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
+      />
+
 </configure>
 

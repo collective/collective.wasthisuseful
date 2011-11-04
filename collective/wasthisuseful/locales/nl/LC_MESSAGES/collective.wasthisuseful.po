@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-11-03 11:14+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,28 +17,46 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.wasthisuseful\n"
 
+#: ../profiles/default/controlpanel.xml
+msgid "Usefulness Ratings"
+msgstr "Waarderingen van nuttigheid"
+
+#: ../browser/controlpanel.py:10
+msgid "Was This Useful settings"
+msgstr "Instellingen voor \"Was dit nuttig\""
+
+#. Default: "For which content types shall we enable rating?"
+#: ../interfaces.py:31
+msgid "help_enabled_types"
+msgstr "Voor welke content-typen moeten waarderingen van nuttigheid worden aangezet?"
+
 #. Default: "Comment"
-#: ../adapters.py:18
+#: ../adapters.py:16
 msgid "label_comment"
 msgstr "Opmerking bij waardering van het nut"
 
+#. Default: "Enabled types"
+#: ../interfaces.py:30
+msgid "label_enabled_types"
+msgstr "Actieve typen"
+
 #. Default: "Rating"
-#: ../adapters.py:29
+#: ../adapters.py:25
 msgid "label_value"
 msgstr "Waardering van het nut"
 
 #. Default: "Was this information useful?"
-#: ../browser/useful.pt:10
+#: ../browser/useful.pt:13
 msgid "label_was_this_useful"
 msgstr "Was deze informatie nuttig?"
 
 #. Default: "Why?"
-#: ../browser/useful.pt:19
+#: ../browser/useful.pt:22
 msgid "label_why"
 msgstr "Waarom?"
 
 #. Default: "Thank you for voting!"
-#: ../browser/views.py:35
+#: ../browser/views.py:36
 msgid "message_thank_you"
 msgstr "Bedankt voor het geven van uw mening!"
 
