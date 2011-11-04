@@ -7,6 +7,10 @@ from Products.Archetypes.interfaces.field import IStringField
 
 from collective.wasthisuseful import wasthisusefulMessageFactory as _
 
+class IWasThisUsefulProductLayer(Interface):
+    """Marker interface for browser layer
+    """
+
 class IWasThisUsefulSettings(Interface):
     """Global settings for "Was this useful". 
 	This describes records stored in the
@@ -18,7 +22,7 @@ class IWasThisUsefulSettings(Interface):
 		description=_(u"help_enabled_types",
 				   default=u"For which content types shall we enable rating?"),
 		required=False,
-		default=(),
+		default=('Document',),
 		value_type=schema.Choice(
 						vocabulary="plone.app.vocabularies.UserFriendlyTypes"),
 		)

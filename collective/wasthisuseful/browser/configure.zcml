@@ -3,20 +3,24 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.wasthisuseful">
 
-    <include package="plone.app.registry" />
-    <!-- Control panel -->
-    <browser:page
-        name="wasthisuseful-settings"
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        class=".controlpanel.WasThisUsefulSettingsControlPanel"
-        permission="cmf.ManagePortal"
-        />
+  <include package="plone.browserlayer" />
+
+  <!-- Control panel -->
+  <include package="plone.app.registry" />
+  <browser:page
+      name="wasthisuseful-settings"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.WasThisUsefulSettingsControlPanel"
+      permission="cmf.ManagePortal"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
+      />
 
   <browser:page
       for="Products.ATContentTypes.interfaces.document.IATDocument"
       name="usefulness-form"
       class=".views.UsefulnessView"
       permission="zope2.View"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       />
 
   <browser:viewlet
@@ -25,11 +29,13 @@
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
       class=".viewlets.WasThisUsefulViewlet"
       permission="zope2.View"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       /> 
 
   <browser:resourceDirectory
       name="collective.wasthisuseful.javascripts"
       directory="javascripts"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       />
 
 </configure>
