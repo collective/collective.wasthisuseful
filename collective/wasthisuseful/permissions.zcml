@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="collective.wasthisuseful">
+
+  <permission
+   id="collective.wasthisuseful.manageRatings"
+   title="wasthisuseful: Manage ratings"
+   />
+
+</configure>

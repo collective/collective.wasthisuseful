@@ -9,6 +9,7 @@
   <include package="plone.contentrules" />
   <include package="plone.contentrules" file="meta.zcml" />
 
+  <include file="permissions.zcml" />
   <include package=".browser" />
   <include file="profiles.zcml" />
   <i18n:registerTranslations directory="locales" />
