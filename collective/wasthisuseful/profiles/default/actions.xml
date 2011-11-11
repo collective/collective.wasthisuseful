@@ -6,8 +6,8 @@
    <property name="title">Usefulness ratings</property>
    <property
       name="description">Manage usefulness rating settings for this item.</property>
-   <property
-      name="url_expr"></property>
+   <property 
+     name="url_expr">string:${object_url}/@@usefulness-settings</property>
    <property name="link_target"></property>
    <property name="icon_expr"></property>
    <property name="available_expr"></property>

@@ -9,7 +9,6 @@ from collective.wasthisuseful.config import KEY_USEFUL, KEY_COMMENT, \
     KEY_DATE, KEY_IP, FORM_FIELD_USEFUL, FORM_FIELD_COMMENT
 from collective.wasthisuseful.event import UsefulnessEvent
 from collective.wasthisuseful.interfaces import IUsefulnessManager
-#from collective.wasthisuseful.manager import UsefulnessManager
 
 class UsefulnessView(BrowserView):
     """Parse the submitted "was this useful"-form.
@@ -46,4 +45,11 @@ class UsefulnessView(BrowserView):
                                     comment=form.get(FORM_FIELD_COMMENT, None))
             self._addVote(vote)
         self.request.RESPONSE.redirect(self.context.absolute_url())
+
+class UsefulnessSettingsView(BrowserView):
+    """Management screen for individual objects.
+
+    - ratings enabled yes/no
+    - possibly later: rating details (date, IP)
+    """
 

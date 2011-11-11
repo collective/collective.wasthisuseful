@@ -16,7 +16,7 @@
       />
 
   <browser:page
-      for="Products.ATContentTypes.interfaces.document.IATDocument"
+      for="Products.CMFCore.interfaces.IContentish"
       name="usefulness-form"
       class=".views.UsefulnessView"
       permission="zope2.View"
@@ -25,12 +25,21 @@
 
   <browser:viewlet
       name="collective.wasthisuseful.WasThisUseful"
-      for="Products.ATContentTypes.interfaces.document.IATDocument"
+      for="Products.CMFCore.interfaces.IContentish"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
       class=".viewlets.WasThisUsefulViewlet"
       permission="zope2.View"
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       /> 
+
+  <browser:page
+      for="Products.CMFCore.interfaces.IContentish"
+      name="usefulness-settings"
+      class=".views.UsefulnessSettingsView"
+      template="templates/settings.pt"
+      permission="zope2.View"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
+      />
 
   <browser:resourceDirectory
       name="collective.wasthisuseful.javascripts"
