@@ -45,9 +45,13 @@ class UsefulnessManager(object):
         IAnnotations(self.context)[STORAGE_KEY] = votes
 
     def ratingEnabled(self):
+        """Check if type is enabled
+        """
+        enabled = False
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IWasThisUsefulSettings)
         enabled_types = settings.enabled_types
-        return self.context.portal_type in enabled_types
-        
+        if self.context.portal_type in enabled_types:
+            enabled = True
+        return enabled
 

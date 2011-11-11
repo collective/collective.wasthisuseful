@@ -18,7 +18,7 @@
   <browser:page
       for="Products.CMFCore.interfaces.IContentish"
       name="usefulness-form"
-      class=".views.UsefulnessView"
+      class=".views.formparser.FormParserView"
       permission="zope2.View"
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       />
@@ -35,7 +35,7 @@
   <browser:page
       for="Products.CMFCore.interfaces.IContentish"
       name="usefulness-settings"
-      class=".views.UsefulnessSettingsView"
+      class=".views.settings.UsefulnessSettingsView"
       template="templates/settings.pt"
       permission="collective.wasthisuseful.manageRatings"
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
