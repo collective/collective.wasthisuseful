@@ -4,7 +4,9 @@
       i18n:domain="collective.wasthisuseful">
 <body>
   <div metal:fill-slot="main"
-      tal:define="rating_enabled view/ratingEnabled">
+      tal:define="
+        rating_enabled view/ratingEnabled;
+        ">
             
     <h1 i18n:translate="heading_settings_screen">Usefulness rating settings</h1>
 
@@ -13,7 +15,8 @@
         <tr>
           <th i18n:translate="heading_rating_enabled">Rating enabled</th>
           <td><input 
-              type="checkbox" name="rating_enabled" value="1" 
+              type="checkbox"
+              disabled="disabled"
               tal:attributes="
                 checked python:rating_enabled and 'checked';
                 "

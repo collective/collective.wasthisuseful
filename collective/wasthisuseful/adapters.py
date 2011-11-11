@@ -35,6 +35,7 @@ class usefulnessRatingValueSubstitution(BaseSubstitution):
 class UsefulnessManager(object):
     """See interfaces.py, IUsefulnessManager
     """
+
     def __init__(self, context):
         self.context = context
 
@@ -44,14 +45,25 @@ class UsefulnessManager(object):
     def setVotes(self, votes):
         IAnnotations(self.context)[STORAGE_KEY] = votes
 
-    def ratingEnabled(self):
+class UsefulnessSettingsManager(object):
+    """See interfaces.py, IUsefulnessSettingsManager
+    """
+
+    def __init__(self, context):
+        self.context = context
+
+    def ratingEnabledType(self):
         """Check if type is enabled
         """
-        enabled = False
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IWasThisUsefulSettings)
         enabled_types = settings.enabled_types
-        if self.context.portal_type in enabled_types:
-            enabled = True
-        return enabled
+        return self.context.portal_type in enabled_types
+
+    def ratingEnabled(self):
+        """Check if type is enabled
+        """
+        if not self.ratingEnabledType:
+            return False
+        return True
 

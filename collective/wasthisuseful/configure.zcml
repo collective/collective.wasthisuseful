@@ -41,11 +41,18 @@
       name="usefulness_value"
       />
  
-  <!-- Adapt content to storage manager -->
+  <!-- Adapt content to ratings manager -->
   <adapter
       provides=".interfaces.IUsefulnessManager"
       for="Products.CMFCore.interfaces.IContentish"
       factory=".adapters.UsefulnessManager"
+      />
+
+  <!-- Adapt content to rating settings manager -->
+  <adapter
+      provides=".interfaces.IUsefulnessSettingsManager"
+      for="Products.CMFCore.interfaces.IContentish"
+      factory=".adapters.UsefulnessSettingsManager"
       />
 
 </configure>

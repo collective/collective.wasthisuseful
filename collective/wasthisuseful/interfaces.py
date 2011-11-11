@@ -17,6 +17,9 @@ class IUsefulnessManager(Interface):
         """Re-set the list of all votes
         """
 
+class IUsefulnessSettingsManager(Interface):
+    """Helper class to manage settings for object: can it be rated.
+    """
     def ratingEnabled():
         """
         """

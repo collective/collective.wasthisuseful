@@ -1,6 +1,6 @@
 from Products.Five import BrowserView
 
-from collective.wasthisuseful.interfaces import IUsefulnessManager
+from collective.wasthisuseful.interfaces import IUsefulnessSettingsManager
 
 class UsefulnessSettingsView(BrowserView):
     """Management screen for individual objects.
@@ -10,6 +10,5 @@ class UsefulnessSettingsView(BrowserView):
     """
     
     def ratingEnabled(self):
-        manager = IUsefulnessManager(self.context)
+        manager = IUsefulnessSettingsManager(self.context)
         return manager.ratingEnabled()
-        
