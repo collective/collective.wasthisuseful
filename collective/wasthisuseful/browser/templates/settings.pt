@@ -6,23 +6,40 @@
   <div metal:fill-slot="main"
       tal:define="
         rating_enabled view/ratingEnabled;
+        is_folderish view/isFolderish;
+        form_results view/processForm;
         ">
             
     <h1 i18n:translate="heading_settings_screen">Usefulness rating settings</h1>
 
-    <form>
-      <table class="plain">
-        <tr>
-          <th i18n:translate="heading_rating_enabled">Rating enabled</th>
-          <td><input 
-              type="checkbox"
-              disabled="disabled"
-              tal:attributes="
-                checked python:rating_enabled and 'checked';
-                "
-              /></td>
-        </tr>
-      </table>
+    <tal:ratingDisabled tal:condition="rating_enabled" >
+      <p i18n:translate="text_rating_enabled">
+        Rating is enabled.
+      </p>
+    </tal:ratingDisabled>
+
+    <tal:ratingDisabled tal:condition="not:rating_enabled" >
+      <p i18n:translate="text_rating_disabled">
+        Rating is disabled.
+      </p>
+    </tal:ratingDisabled>
+
+    <tal:notFolderish tal:condition="not:is_folderish">
+      <p i18n:translate="text_not_folderish">
+        To enable or disable rating on this item, see the "Enabled types"-list
+        and/or make sure the parent folder doesn't override it.
+      </p>
+    </tal:notFolderish>
+
+    <form tal:condition="is_folderish" method="POST" action="">
+      <input tal:condition="rating_enabled"
+          type="submit" name="disable_rating" 
+          value="Disable rating for this item and its children."
+          i18n:attributes="value" />
+      <input tal:condition="not: rating_enabled"
+          type="submit" name="enable_rating" 
+          value="Enable rating for this item and its children."
+          i18n:attributes="value" />
     </form>
 
   </div>

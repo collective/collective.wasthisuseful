@@ -5,8 +5,7 @@ Changelog
 ----------------
 
 - Add permission `wasthisuseful: Manage ratings` for controlpanel
-- Add "Manage ratings" view
-- Calculate if ratings are enabled in the ratings manager, not the viewlet
+- Allow to disable ratings for folders (and the children in them)
 
 0.1dvldev (unreleased)
 ----------------------

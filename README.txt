@@ -47,11 +47,19 @@ Select enabled types
 The settings form which enables you to select on which content types the
 viewlet is available via the Plone control panel ("Site setup").
 
+Disabling specific folders
+--------------------------
+
+Once you've set the enabled types, you can override this behaviour by going to
+the "Usefulness ratings" tab. On folderish objects, you can disable rating for
+this object and its children.
+
 To do
 =====
 
+- Show warning when viewing settings of item that is default view (like Topic
+  `aggregator` in News Folder).
 - Show number of ratings
-- Ability to disable rating on one content item
 - Integrate with collective.contentratings_
 - Translate rating value ("Yes"/"No") in content rule e-mail
 

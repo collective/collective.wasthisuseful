@@ -7,7 +7,7 @@ from plone.stringinterp.adapters import BaseSubstitution
 
 from collective.wasthisuseful import wasthisusefulMessageFactory as _
 from collective.wasthisuseful.config import KEY_USEFUL, KEY_COMMENT, \
-                                                      STORAGE_KEY, SETTINGS_KEY
+                                  STORAGE_KEY, SETTINGS_KEY, ENABLE_CHILDREN
 from collective.wasthisuseful.interfaces import IWasThisUsefulSettings
 
 class usefulnessRatingCommentSubstitution(BaseSubstitution):
@@ -47,10 +47,35 @@ class UsefulnessManager(object):
 
 class UsefulnessSettingsManager(object):
     """See interfaces.py, IUsefulnessSettingsManager
+
+    Settings are stored as a dictionary.
     """
 
     def __init__(self, context):
         self.context = context
+
+    def getSettings(self):
+        return IAnnotations(self.context).get(SETTINGS_KEY, {})
+
+    def getParentSettings(self):
+        return IAnnotations(self.context.aq_parent).get(SETTINGS_KEY, {})
+
+    def setSettings(self, settings):
+        IAnnotations(self.context)[SETTINGS_KEY] = settings
+
+    def disableRating(self):
+        """Disable rating for item and its children
+        """
+        settings = self.getSettings()
+        settings.update({ENABLE_CHILDREN: False})
+        self.setSettings(settings)
+
+    def enableRating(self):
+        """Enable rating for item and its children
+        """
+        settings = self.getSettings()
+        settings.update({ENABLE_CHILDREN: True})
+        self.setSettings(settings)
 
     def ratingEnabledType(self):
         """Check if type is enabled
@@ -61,9 +86,14 @@ class UsefulnessSettingsManager(object):
         return self.context.portal_type in enabled_types
 
     def ratingEnabled(self):
-        """Check if type is enabled
+        """Check if rating is enabled on object
         """
         if not self.ratingEnabledType:
             return False
+        settings = self.getSettings()
+        if settings:
+            return settings[ENABLE_CHILDREN]
+        parent_settings = self.getParentSettings()
+        if parent_settings:
+            return parent_settings[ENABLE_CHILDREN]
         return True
-
