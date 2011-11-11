@@ -11,7 +11,7 @@
       name="wasthisuseful-settings"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".controlpanel.WasThisUsefulSettingsControlPanel"
-      permission="cmf.ManagePortal"
+      permission="collective.wasthisuseful.manageRatings"
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       />
 
@@ -37,7 +37,7 @@
       name="usefulness-settings"
       class=".views.UsefulnessSettingsView"
       template="templates/settings.pt"
-      permission="zope2.View"
+      permission="collective.wasthisuseful.manageRatings"
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       />
 
