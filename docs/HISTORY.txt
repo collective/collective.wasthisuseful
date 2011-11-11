@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.2 (unreleased)
+----------------
+
+- Add permission `wasthisuseful: Manage ratings` for controlpanel
+- Add "Manage ratings" view
+- Calculate if ratings are enabled in the ratings manager, not the viewlet
+
 0.1dvldev (unreleased)
 ----------------------
 

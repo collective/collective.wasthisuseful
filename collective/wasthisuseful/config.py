@@ -3,7 +3,8 @@
 
 PROJECTNAME = 'collective.wasthisuseful'
 
-STORAGE_KEY = 'usefulness' # key for annotation storage
+STORAGE_KEY = 'usefulness' # key for annotation storage of ratings
+SETTINGS_KEY = 'usefulness_settings' # key for rating settings
 KEY_USEFUL = 'useful' # see _createVote
 KEY_COMMENT = 'comment' # see _createVote
 KEY_DATE = 'date' # see _createVote

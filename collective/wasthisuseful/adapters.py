@@ -1,15 +1,14 @@
 from zope.annotation.interfaces import IAnnotations
-from zope.component import adapts 
+from zope.component import getUtility 
  
-from Products.CMFCore.interfaces import IContentish
-
+from plone.registry.interfaces import IRegistry
 from plone.stringinterp import _ as PloneStringInterpMessageFactory
 from plone.stringinterp.adapters import BaseSubstitution
-from plone.stringinterp.interfaces import IStringSubstitution 
 
 from collective.wasthisuseful import wasthisusefulMessageFactory as _
 from collective.wasthisuseful.config import KEY_USEFUL, KEY_COMMENT, \
-                                                                    STORAGE_KEY
+                                                      STORAGE_KEY, SETTINGS_KEY
+from collective.wasthisuseful.interfaces import IWasThisUsefulSettings
 
 class usefulnessRatingCommentSubstitution(BaseSubstitution):
     category = PloneStringInterpMessageFactory(u'All Content')
@@ -44,3 +43,11 @@ class UsefulnessManager(object):
 
     def setVotes(self, votes):
         IAnnotations(self.context)[STORAGE_KEY] = votes
+
+    def ratingEnabled(self):
+        registry = getUtility(IRegistry)
+        settings = registry.forInterface(IWasThisUsefulSettings)
+        enabled_types = settings.enabled_types
+        return self.context.portal_type in enabled_types
+        
+

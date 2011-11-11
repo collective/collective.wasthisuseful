@@ -1,8 +1,5 @@
 from zope import schema
-from zope.interface import Interface, implements
-from zope.i18nmessageid import MessageFactory
-
-from Products.Archetypes.interfaces.field import IStringField
+from zope.interface import Interface
 
 from collective.wasthisuseful import wasthisusefulMessageFactory as _
 
@@ -18,6 +15,10 @@ class IUsefulnessManager(Interface):
         """
     def setVotes():
         """Re-set the list of all votes
+        """
+
+    def ratingEnabled():
+        """
         """
 
 class IWasThisUsefulSettings(Interface):
