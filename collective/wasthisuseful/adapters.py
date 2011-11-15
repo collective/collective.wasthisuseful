@@ -88,12 +88,13 @@ class UsefulnessSettingsManager(object):
     def ratingEnabled(self):
         """Check if rating is enabled on object
         """
-        if not self.ratingEnabledType:
-            return False
         settings = self.getSettings()
         if settings:
-            return settings[ENABLE_CHILDREN]
-        parent_settings = self.getParentSettings()
-        if parent_settings:
-            return parent_settings[ENABLE_CHILDREN]
-        return True
+            value = settings[ENABLE_CHILDREN]
+        else:
+            parent_settings = self.getParentSettings()
+            if parent_settings:
+                value = parent_settings[ENABLE_CHILDREN]
+            else:
+                value = self.ratingEnabledType
+        return value

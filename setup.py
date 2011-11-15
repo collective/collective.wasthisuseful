@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1dvl'
+version = '0.2dvl'
 
 setup(name='collective.wasthisuseful',
       version=version,

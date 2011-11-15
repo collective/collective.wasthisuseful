@@ -1,11 +1,12 @@
 Changelog
 =========
 
-0.2 (unreleased)
+0.2 (2011-11-15)
 ----------------
 
 - Add permission `wasthisuseful: Manage ratings` for controlpanel
 - Allow to disable ratings for folders (and the children in them)
+- Make settings on folder take precedende over enabled types
 
 0.1dvldev (unreleased)
 ----------------------

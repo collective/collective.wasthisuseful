@@ -16,6 +16,7 @@ Features
   * Clicking "Yes" immediately submits
   * Clicking "No" shows a comment field and submit button
 - By default, enabled for "Document" types, others selectable.
+- Can be overridden (enabled and disabled) for all content types.
 - Enables immediate e-mail notification, with the rating value ("Yes" or "No")
   and rating comment (in the case of "No") as e-mail variables.
 
@@ -44,15 +45,27 @@ the usual `${url}` and `${title}`.
 Select enabled types
 --------------------
 
-The settings form which enables you to select on which content types the
-viewlet is available via the Plone control panel ("Site setup").
+The "WasThisUseful-settings" form enables you to select on which content types
+the viewlet is available. You can reach is via the Plone control panel ("Site 
+setup") or directly via `@@wasthisuseful-settings`.
 
-Disabling specific folders
---------------------------
+Enabling and disabling specific folders
+---------------------------------------
 
-Once you've set the enabled types, you can override this behaviour by going to
+You can override the "enabled types" behaviour by going to
 the "Usefulness ratings" tab. On folderish objects, you can disable rating for
-this object and its children.
+the folderish object and its children. 
+
+    You can even do this for content items that are not in the "enabled types"
+    list.
+
+Whether an object has ratings enabled is decided in the following order:
+    1. Has the object itself been set to enabled / disabled (using the
+       "Usefulness ratings" tab)? If so, use that setting.
+    2. Has the object's direct parent been set to enabled / disabled (using the
+       "Usefulness ratings" tab)? If so, use that setting.
+    3. Is the object of a type that has been enabled on the
+       "WasThisUseful-settings" controlpanel?
 
 To do
 =====
