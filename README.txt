@@ -70,6 +70,7 @@ Whether an object has ratings enabled is decided in the following order:
 To do
 =====
 
+- Event IUsefulnessEvent seems only to be fired for non-folderish items
 - Show warning when viewing settings of item that is default view (like Topic
   `aggregator` in News Folder).
 - Show number of ratings
