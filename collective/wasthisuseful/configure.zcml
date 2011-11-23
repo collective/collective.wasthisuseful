@@ -8,6 +8,7 @@
 
   <include package="plone.contentrules" />
   <include package="plone.contentrules" file="meta.zcml" />
+  <include package="plone.app.registry" />
 
   <include file="permissions.zcml" />
   <include package=".browser" />

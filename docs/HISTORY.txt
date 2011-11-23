@@ -4,6 +4,8 @@ Changelog
 0.3 (unreleased)
 ----------------
 
+- Depend on plone.app.registry in setup.py
+
 0.2 (2011-11-15)
 ----------------
 

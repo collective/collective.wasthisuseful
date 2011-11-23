@@ -27,6 +27,7 @@ setup(name='collective.wasthisuseful',
           'setuptools',
           # -*- Extra requirements: -*-
           'plone.browserlayer',
+          'plone.app.registry',
       ],
       entry_points="""
       # -*- Entry points: -*-
