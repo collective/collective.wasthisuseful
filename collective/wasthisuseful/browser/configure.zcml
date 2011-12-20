@@ -48,6 +48,12 @@
       />
 
   <browser:resourceDirectory
+      name="collective.wasthisuseful.stylesheets"
+      directory="stylesheets"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
+      />
+	
+  <browser:resourceDirectory
       name="collective.wasthisuseful.images"
       directory="images"
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"

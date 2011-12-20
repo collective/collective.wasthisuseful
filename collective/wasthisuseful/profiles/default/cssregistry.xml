@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_css tool. -->
+
+<object name="portal_css">
+
+ <stylesheet title="" authenticated="False" cacheable="True"
+    compression="safe" conditionalcomment="" cookable="True" enabled="on"
+    id="++resource++collective.wasthisuseful.stylesheets/wasthisuseful.css"
+    media="screen" rel="stylesheet"
+    rendering="link"
+    applyPrefix="True"
+    />
+
+</object>

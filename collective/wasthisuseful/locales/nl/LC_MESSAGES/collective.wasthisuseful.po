@@ -4,36 +4,36 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2011-12-20 00:00 +1\n"
+"PO-Revision-Date: 2011-12-20 22:08 +1\n"
+"Last-Translator: Wietze Helmantel <helmantel@gw20e.co>\n"
+"Language-Team: Dutch <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: nl\n"
+"Language-Name: Dutch\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.wasthisuseful\n"
 
 #: ../profiles/default/controlpanel.xml
 msgid "Usefulness Ratings"
-msgstr "Waarderingen van nuttigheid"
+msgstr "Waarderingen van bruikbaarheid"
 
 #: ../browser/controlpanel.py:10
 msgid "Was This Useful settings"
-msgstr "Instellingen voor \"Was dit nuttig\""
+msgstr "Instellingen voor \"Kwam deze informatie van pas\""
 
 #. Default: "For which content types shall we enable rating?"
 #: ../interfaces.py:31
 msgid "help_enabled_types"
-msgstr "Voor welke content-typen moeten waarderingen van nuttigheid worden aangezet?"
+msgstr "Voor welke content-typen moeten waarderingen van bruikbaarheid worden aangezet?"
 
 #. Default: "Comment"
 #: ../adapters.py:16
 msgid "label_comment"
-msgstr "Opmerking bij waardering van het nut"
+msgstr "Opmerking bij waardering van bruikbaarheid"
 
 #. Default: "Enabled types"
 #: ../interfaces.py:30
@@ -43,17 +43,17 @@ msgstr "Actieve typen"
 #. Default: "Rating"
 #: ../adapters.py:25
 msgid "label_value"
-msgstr "Waardering van het nut"
+msgstr "Waardering van bruikbaarheid"
 
 #. Default: "Was this information useful?"
 #: ../browser/useful.pt:13
 msgid "label_was_this_useful"
-msgstr "Was deze informatie nuttig?"
+msgstr "Kwam deze informatie van pas?"
 
 #. Default: "Why?"
 #: ../browser/useful.pt:22
 msgid "label_why"
-msgstr "Waarom?"
+msgstr "Kunt u aangeven waarom niet?"
 
 #. Default: "Thank you for voting!"
 #: ../browser/views.py:36
