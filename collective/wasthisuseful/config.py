@@ -10,7 +10,8 @@ KEY_DATE = 'date' # see _createVote
 KEY_IP = 'ip_address' # see _createVote
 
 SETTINGS_KEY = 'usefulness_settings' # key for rating settings
-ENABLE_CHILDREN = '' # whether ratings are enabled on children
+CHILDREN_ENABLED = 'children_enabled' # whether ratings are enabled on children
+ITEM_ENABLED = 'item_enabled' # whether ratings are enabled on this item
 
 FORM_FIELD_USEFUL = 'useful' # equals form field in useful.pt
 FORM_FIELD_COMMENT = 'comment' # equals form field in useful.pt

@@ -11,10 +11,17 @@ class UsefulnessSettingsView(BrowserView):
     - possibly later: rating details (date, IP)
     """
     
+    @property
     def ratingEnabled(self):
         manager = IUsefulnessSettingsManager(self.context)
         return manager.ratingEnabled()
     
+    @property
+    def childrenEnabled(self):
+        manager = IUsefulnessSettingsManager(self.context)
+        return manager.childrenEnabled()
+        
+    @property
     def isFolderish(self):
         return self.context.isPrincipiaFolderish
 
@@ -26,12 +33,20 @@ class UsefulnessSettingsView(BrowserView):
             if form.has_key('disable_rating'):
                 manager.disableRating()
                 messages.addStatusMessage(_(u'message_disabled',
-                    default=u'Rating was disabled for this object and its children.'))
-            else:
-                if form.has_key('enable_rating'):
-                    manager.enableRating()
-                    messages.addStatusMessage(_(u'message_enabled',
-                        default=u'Rating was enabled for this object and its children.'))
+                    default=u'Rating was disabled for this object'))
+            elif form.has_key('disable_rating_children'):
+                manager.disableRating(children=True)
+                messages.addStatusMessage(_(u'message_disabled',
+                    default=u'Rating was disabled for this object and its children'))
+            elif form.has_key('enable_rating'):
+                manager.enableRating()
+                messages.addStatusMessage(_(u'message_enabled',
+                    default=u'Rating was enabled for this object'))
+            elif form.has_key('enable_rating_children'):
+                manager.enableRating(children=True)
+                messages.addStatusMessage(_(u'message_enabled',
+                    default=u'Rating was enabled for this object and its children'))
+                        
             self.request.RESPONSE.redirect(self.request.URL)
         else:
             # no form submitted, do nothing
