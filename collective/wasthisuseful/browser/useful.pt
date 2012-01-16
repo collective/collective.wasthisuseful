@@ -26,9 +26,10 @@
 		</div>
 		
 		<div id="why-not-useful">
-			<span i18n:translate="label_why">Why?</span>
-			<input id="div-comment" name="comment" type="text"/><input id="div-submit" type="button" name="Submit" value="Submit" i18n:domain="plone" i18n:attributes="value"/>
+			<label for="comment" i18n:translate="label_why">Why?</label>
+            <textarea id="div-comment" name="comment" rows="3" cols="25" ></textarea>
+            <input id="div-submit" type="button" name="Submit" value="Submit" i18n:domain="plone" i18n:attributes="value"/>
 		</div>
 	</div>
-	
+
 </tal:defineEnabled>

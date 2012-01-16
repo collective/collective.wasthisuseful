@@ -7,7 +7,7 @@ var wtu = {
            jq('#usefulness-form').submit();
         });
         
-        jq('.javascript-only').show();
+        jq('.javascript-only').css('display', 'inline');
         jq('#usefulness-form').hide();
         
         jq('.relevance a').click(function(e) {
@@ -16,21 +16,23 @@ var wtu = {
             
             // reset, read thumb, and check according field
             jq('input[name=useful]').attr('checked', false);
-            thumb = jq(this).attr('class');
+
+            var thumb = jq(this).attr('class');
+            var up = jq('.up');
+            var down = jq('.down');
+            var whynot = jq("#why-not-useful");
             
             if( thumb == 'up' ) {
-                jq('.up').css('background-position', '5px -30px');
-                jq('.down').css('background-position', '-50px 0');
-                jq('.content .details .update').css('height', '1em');
-                jq("#why-not-useful").hide();
+                up.css('background-position', '5px -30px');
+                down.css('background-position', '-50px 0');
+                whynot.hide();
                 jq('input#yes').attr('checked', true);
                 jq('#usefulness-form').submit();
             } else {
-                jq('.down').css('background-position', '-50px -30px');
-                jq('.up').css('background-position', '5px 0');
+                down.css('background-position', '-50px -30px');
+                up.css('background-position', '5px 0');
                 jq('input#no').attr('checked', true);
-                jq('.content .details .update').css('height', '4em');
-                jq("#why-not-useful").fadeIn();
+                whynot.fadeIn();
             }
         })    
     },

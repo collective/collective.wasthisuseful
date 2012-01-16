@@ -1,10 +1,8 @@
 .javascript-only {
     display: none;
 }
-
 #why-not-useful {
     display: none;
-    text-align: right;
     padding-top: 1em;
 }
 
@@ -31,4 +29,14 @@
 }
 .relevance a.down:hover {
     background-position: -50px -30px;
+}
+#why-not-useful input,
+#why-not-useful label {
+    display: block;
+}
+#why-not-useful label {
+    font-weight: normal;
+}
+#why-not-useful textarea {
+    margin: 0.5em 0em;
 }
