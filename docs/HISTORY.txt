@@ -5,6 +5,7 @@ Changelog
 ----------------
 
 - Depend on plone.app.registry in setup.py
+- Only show wasthisuseful viewlet in views marked with IViewView
 
 0.2 (2011-11-15)
 ----------------
