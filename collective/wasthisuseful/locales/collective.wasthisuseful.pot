@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-11-04 11:48+0000\n"
+"POT-Creation-Date: 2012-01-16 16:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,50 +17,110 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.wasthisuseful\n"
 
-#: ../browser/controlpanel.py:11
+#: ./browser/controlpanel.py:11
 msgid ""
 msgstr ""
 
-#: ../profiles/default/controlpanel.xml
+#: ./browser/templates/settings.pt:35
+msgid "Disable rating for this item and its children"
+msgstr ""
+
+#: ./browser/templates/settings.pt:31
+msgid "Disable rating for this item only"
+msgstr ""
+
+#: ./browser/templates/settings.pt:44
+msgid "Enable rating for this item and its children"
+msgstr ""
+
+#: ./browser/templates/settings.pt:40
+msgid "Enable rating for this item only"
+msgstr ""
+
+#: ./browser/useful.pt:12
+msgid "No, this information was not useful."
+msgstr ""
+
+#: ./browser/views/settings.py:35
+msgid "Rating was disabled for this object"
+msgstr ""
+
+#: ./browser/views/settings.py:38
+msgid "Rating was disabled for this object and its children"
+msgstr ""
+
+#: ./browser/views/settings.py:41
+msgid "Rating was enabled for this object"
+msgstr ""
+
+#: ./browser/views/settings.py:44
+msgid "Rating was enabled for this object and its children"
+msgstr ""
+
+#: ./profiles/default/controlpanel.xml
 msgid "Usefulness Ratings"
 msgstr ""
 
-#: ../browser/controlpanel.py:10
+#: ./browser/controlpanel.py:10
 msgid "Was This Useful settings"
 msgstr ""
 
+#: ./browser/useful.pt:11
+msgid "Yes, this information was useful."
+msgstr ""
+
+#. Default: "Usefulness rating settings"
+#: ./browser/templates/settings.pt:13
+msgid "heading_settings_screen"
+msgstr ""
+
 #. Default: "For which content types shall we enable rating?"
-#: ../interfaces.py:31
+#: ./interfaces.py:35
 msgid "help_enabled_types"
 msgstr ""
 
 #. Default: "Comment"
-#: ../adapters.py:16
+#: ./adapters.py:16
 msgid "label_comment"
 msgstr ""
 
 #. Default: "Enabled types"
-#: ../interfaces.py:30
+#: ./interfaces.py:34
 msgid "label_enabled_types"
 msgstr ""
 
 #. Default: "Rating"
-#: ../adapters.py:25
+#: ./adapters.py:25
 msgid "label_value"
 msgstr ""
 
 #. Default: "Was this information useful?"
-#: ../browser/useful.pt:13
+#: ./browser/useful.pt:6
 msgid "label_was_this_useful"
 msgstr ""
 
-#. Default: "Why?"
-#: ../browser/useful.pt:22
+#. Default: "Can you explain why it was not useful?"
+#: ./browser/useful.pt:36
 msgid "label_why"
 msgstr ""
 
+#. Default: "If this information wasn't useul, can you explain why it was not useful?"
+#: ./browser/useful.pt:24
+msgid "label_why_noscript"
+msgstr ""
+
 #. Default: "Thank you for voting!"
-#: ../browser/views.py:36
+#: ./browser/views/formparser.py:35
 msgid "message_thank_you"
+msgstr ""
+
+#. Default: "Rating is disabled for this item <span>and its children</span>"
+#: ./browser/templates/settings.pt:25
+msgid "text_rating_disabled"
+msgstr ""
+
+#. Default: "Rating is enabled for this item <span>and its children</span>"
+#: ./browser/templates/settings.pt:18
+msgid "text_rating_enabled"
 msgstr ""
 

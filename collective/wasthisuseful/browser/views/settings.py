@@ -32,20 +32,16 @@ class UsefulnessSettingsView(BrowserView):
             manager = IUsefulnessSettingsManager(self.context)
             if form.has_key('disable_rating'):
                 manager.disableRating()
-                messages.addStatusMessage(_(u'message_disabled',
-                    default=u'Rating was disabled for this object'))
+                messages.addStatusMessage(_(u'Rating was disabled for this object'))
             elif form.has_key('disable_rating_children'):
                 manager.disableRating(children=True)
-                messages.addStatusMessage(_(u'message_disabled',
-                    default=u'Rating was disabled for this object and its children'))
+                messages.addStatusMessage(_(u'Rating was disabled for this object and its children'))
             elif form.has_key('enable_rating'):
                 manager.enableRating()
-                messages.addStatusMessage(_(u'message_enabled',
-                    default=u'Rating was enabled for this object'))
+                messages.addStatusMessage(_(u'Rating was enabled for this object'))
             elif form.has_key('enable_rating_children'):
                 manager.enableRating(children=True)
-                messages.addStatusMessage(_(u'message_enabled',
-                    default=u'Rating was enabled for this object and its children'))
+                messages.addStatusMessage(_(u'Rating was enabled for this object and its children'))
                         
             self.request.RESPONSE.redirect(self.request.URL)
         else:

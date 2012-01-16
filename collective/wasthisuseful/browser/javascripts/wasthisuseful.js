@@ -9,7 +9,7 @@ var wtu = {
         
         jq('.javascript-only').css('display', 'inline');
         jq('#usefulness-form').hide();
-        
+
         jq('.relevance a').click(function(e) {
             
             e.preventDefault();

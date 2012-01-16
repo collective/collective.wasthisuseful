@@ -8,28 +8,37 @@
 	        </tal:label>
 
 			<div class="javascript-only">
-				<a href="#" title="ja! Deze informatie kwam van pas" class="up"/>
-				<a href="#" title="nee, deze informatie kwam niet van pas" class="down"/>
+				<a href="#" i18n:attributes="title" title="Yes, this information was useful." class="up"/>
+				<a href="#" i18n:attributes="title" title="No, this information was not useful." class="down"/>
 			</div>
-	
+
 			<form name="usefulness" tal:attributes="action string:${context/absolute_url}/@@usefulness-form;" method="POST" id="usefulness-form">
-				<input type="radio" id="yes" name="useful" value="1" onclick="this.form.submit();"/>
-				<span i18n:domain="plone" i18n:translate="">Yes</span>
-				<input type="radio" id="no" name="useful" value="0"/>
-				<span i18n:domain="plone" i18n:translate="">No</span>
-				<span class="comments">
-					<span i18n:translate="label_why">Why?</span>
-					<input id="form-comment" type="text" name="comment"/>
-					<input type="submit" name="Submit" value="Submit" i18n:domain="plone" i18n:attributes="value"/>
-				</span>
+                <div class="field">
+                    <input type="radio" id="yes" name="useful" value="1"/>
+                    <label for="yes" i18n:domain="plone" i18n:translate="">Yes</label>
+                    <input type="radio" id="no" name="useful" value="0"/>
+                    <label for="no" i18n:domain="plone" i18n:translate="">No</label>
+                </div>
+
+				<div class="field comments">
+					<label for="form-comment" i18n:translate="label_why_noscript"
+                            >If this information wasn't useul, can you explain why it was not useful?
+                    </label><br/>
+					<textarea id="form-comment" type="text" rows="3" cols="25" name="comment"></textarea>
+				</div>
+
+                <input type="submit" name="Submit" value="Submit" i18n:domain="plone" i18n:attributes="value"/>
 			</form>
+            <div class="visualClear"></div>
 		</div>
 		
 		<div id="why-not-useful">
-			<label for="div-comment" i18n:translate="label_why">Why?</label>
+			<label for="div-comment" i18n:translate="label_why">Can you explain why it was not useful?</label>
             <textarea id="div-comment" name="comment" rows="3" cols="25" ></textarea>
             <input id="div-submit" type="submit" value="Submit" i18n:domain="plone" i18n:attributes="value"/>
 		</div>
+
+        <div class="visualClear"></div>
 	</div>
 
 </tal:defineEnabled>

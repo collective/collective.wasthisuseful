@@ -6,6 +6,8 @@ Changelog
 
 - Depend on plone.app.registry in setup.py
 - Only show wasthisuseful viewlet in views marked with IViewView
+- Added Dutch translation
+- Minor template/css changes in add this viewlet
 
 0.2 (2011-11-15)
 ----------------
