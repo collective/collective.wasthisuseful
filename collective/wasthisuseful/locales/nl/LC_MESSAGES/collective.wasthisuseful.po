@@ -35,7 +35,7 @@ msgstr "Waarding inschakelen voor dit item"
 
 #: ./browser/useful.pt:12
 msgid "No, this information was not useful."
-msgstr "Nee, deze informatie is niet bruikbaar"
+msgstr "Nee, deze informatie kwam niet van pas."
 
 #: ./browser/views/settings.py:35
 msgid "Rating was disabled for this object"
@@ -63,7 +63,7 @@ msgstr "Instellingen voor \"Kwam deze informatie van pas\""
 
 #: ./browser/useful.pt:11
 msgid "Yes, this information was useful."
-msgstr "Ja, deze informatie is bruikbaar"
+msgstr "Ja, deze informatie kwam van pas."
 
 #. Default: "Usefulness rating settings"
 #: ./browser/templates/settings.pt:13
@@ -96,12 +96,13 @@ msgid "label_was_this_useful"
 msgstr "Kwam deze informatie van pas?"
 
 #. Default: "Can you explain why it was not useful?"
-#: ./browser/useful.pt:36
+#: ./browser/useful.pt:35
 msgid "label_why"
 msgstr "Kunt u aangeven waarom niet?"
 
-#. Default: "If this information wasn't useul, can you explain why it was not useful?"
+#. Default: "Can you explain why it was not useful?"
 #: ./browser/useful.pt:24
+#, fuzzy
 msgid "label_why_noscript"
 msgstr "Als de informatie niet bruikbaar is, kunt u aangeven waarom?"
 

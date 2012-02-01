@@ -15,14 +15,13 @@
 			<form name="usefulness" tal:attributes="action string:${context/absolute_url}/@@usefulness-form;" method="POST" id="usefulness-form">
                 <div class="field">
                     <input type="radio" id="yes" name="useful" value="1"/>
-                    <label for="yes" i18n:domain="plone" i18n:translate="">Yes</label>
+                    <label for="yes" i18n:domain="plone" i18n:translate="">Yes, this information was useful.</label>
                     <input type="radio" id="no" name="useful" value="0"/>
-                    <label for="no" i18n:domain="plone" i18n:translate="">No</label>
+                    <label for="no" i18n:domain="plone" i18n:translate="">No, this information was not useful.</label>
                 </div>
 
 				<div class="field comments">
-					<label for="form-comment" i18n:translate="label_why_noscript"
-                            >If this information wasn't useul, can you explain why it was not useful?
+					<label for="form-comment" i18n:translate="label_why_noscript">Can you explain why it was not useful?
                     </label><br/>
 					<textarea id="form-comment" type="text" rows="3" cols="25" name="comment"></textarea>
 				</div>

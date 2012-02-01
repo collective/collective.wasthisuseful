@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-01-16 16:23+0000\n"
+"POT-Creation-Date: 2012-02-01 10:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,11 +100,11 @@ msgid "label_was_this_useful"
 msgstr ""
 
 #. Default: "Can you explain why it was not useful?"
-#: ./browser/useful.pt:36
+#: ./browser/useful.pt:35
 msgid "label_why"
 msgstr ""
 
-#. Default: "If this information wasn't useul, can you explain why it was not useful?"
+#. Default: "Can you explain why it was not useful?"
 #: ./browser/useful.pt:24
 msgid "label_why_noscript"
 msgstr ""
