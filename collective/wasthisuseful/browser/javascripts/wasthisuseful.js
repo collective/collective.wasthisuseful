@@ -34,7 +34,7 @@ var wtu = {
                 jq('input#no').attr('checked', true);
                 whynot.fadeIn();
             }
-        })    
+        }); 
     }
 };
 
