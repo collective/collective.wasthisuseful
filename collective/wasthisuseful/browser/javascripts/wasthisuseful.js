@@ -35,7 +35,7 @@ var wtu = {
                 whynot.fadeIn();
             }
         })    
-    },
+    }
 };
 
 jq(document).ready(function() {
