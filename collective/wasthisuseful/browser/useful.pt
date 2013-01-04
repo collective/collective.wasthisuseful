@@ -27,6 +27,7 @@
 				</div>
 
                 <input type="submit" name="Submit" value="Submit" i18n:domain="plone" i18n:attributes="value"/>
+                <span tal:replace="structure context/@@authenticator/authenticator"/>
 			</form>
             <div class="visualClear"></div>
 		</div>

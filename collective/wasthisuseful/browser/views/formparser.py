@@ -1,6 +1,8 @@
 from DateTime import DateTime
 import zope.event
+from zope.component import getMultiAdapter
 
+from AccessControl.unauthorized import Unauthorized
 from Products.Five import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 
@@ -38,8 +40,12 @@ class FormParserView(BrowserView):
     def __call__(self):
         self.messages = IStatusMessage(self.request)
         form = self.request.form
+        authenticator=getMultiAdapter((self.context, self.request), name=u"authenticator")
+
         if not (form and form.has_key(FORM_FIELD_USEFUL)):
             self.messages.addStatusMessage('No form submitted.')
+        elif not authenticator.verify():
+            raise Unauthorized
         else:
             vote = self._createVote(form[FORM_FIELD_USEFUL], 
                                     comment=form.get(FORM_FIELD_COMMENT, None))
