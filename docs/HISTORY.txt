@@ -8,9 +8,11 @@ Stable release
 0.3 (unreleased)
 ----------------
 
+- Replace jq with $ (Plone 4.0b2 and above) [davilima6]
 - Depend on plone.app.registry in setup.py
 - Only show wasthisuseful viewlet in views marked with IViewView
 - Added Dutch translation
+- Added pt-br translation [davilima6]
 - Minor template/css changes in add this viewlet
 
 0.2 (2011-11-15)

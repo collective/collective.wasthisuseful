@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2012-02-01 10:47+0000\n"
+"PO-Revision-Date: 2013-08-29 07:07-0300\n"
+"Last-Translator: Davi Lima <davilima6@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Code: pt_br\n"
+"Language-Name: Português brasileiro\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.wasthisuseful\n"
+
+#: ./browser/templates/settings.pt:35
+msgid "Disable rating for this item and its children"
+msgstr "Desativar avaliação para este item e seus filhos"
+
+#: ./browser/templates/settings.pt:31
+msgid "Disable rating for this item only"
+msgstr "Desativar avaliação para este item apenas"
+
+#: ./browser/templates/settings.pt:44
+msgid "Enable rating for this item and its children"
+msgstr "Ativar avaliação para este item e seus filhos"
+
+#: ./browser/templates/settings.pt:40
+msgid "Enable rating for this item only"
+msgstr "Ativar avaliação para este item apenas"
+
+#: ./browser/useful.pt:12
+msgid "No, this information was not useful."
+msgstr "Não, esta informação não foi útil."
+
+#: ./browser/views/settings.py:35
+msgid "Rating was disabled for this object"
+msgstr "A avaliação foi desativada para este item"
+
+#: ./browser/views/settings.py:38
+msgid "Rating was disabled for this object and its children"
+msgstr "A avaliação foi desativada para este item e seus filhos"
+
+#: ./browser/views/settings.py:41
+msgid "Rating was enabled for this object"
+msgstr "A avaliação foi ativada para este item"
+
+#: ./browser/views/settings.py:44
+msgid "Rating was enabled for this object and its children"
+msgstr "A avaliação foi ativada para este item e seus filhos"
+
+#: ./profiles/default/controlpanel.xml
+msgid "Usefulness Ratings"
+msgstr "Avaliação de utilidade"
+
+#: ./browser/controlpanel.py:10
+msgid "Was This Useful settings"
+msgstr "Configurações Was This Useful"
+
+#: ./browser/useful.pt:11
+msgid "Yes, this information was useful."
+msgstr "Sim, esta informação foi útil."
+
+#. Default: "Usefulness rating settings"
+#: ./browser/templates/settings.pt:13
+msgid "heading_settings_screen"
+msgstr "Configurações da avaliação de utilidade"
+
+#. Default: "For which content types shall we enable rating?"
+#: ./interfaces.py:35
+msgid "help_enabled_types"
+msgstr "Para que tipos de conteúdo a avaliação deve estar ativada?"
+
+#. Default: "Comment"
+#: ./adapters.py:16
+msgid "label_comment"
+msgstr "Comente"
+
+#. Default: "Enabled types"
+#: ./interfaces.py:34
+msgid "label_enabled_types"
+msgstr "Tipos ativados"
+
+#. Default: "Rating"
+#: ./adapters.py:25
+msgid "label_value"
+msgstr "Avaliação"
+
+#. Default: "Was this information useful?"
+#: ./browser/useful.pt:6
+msgid "label_was_this_useful"
+msgstr "Esta informação foi útil?"
+
+#. Default: "Can you explain why it was not useful?"
+#: ./browser/useful.pt:35
+msgid "label_why"
+msgstr "Você pode explicar por que não foi útil?"
+
+#. Default: "Can you explain why it was not useful?"
+#: ./browser/useful.pt:24
+msgid "label_why_noscript"
+msgstr "Você pode explicar por que não foi útil?"
+
+#. Default: "Thank you for voting!"
+#: ./browser/views/formparser.py:35
+msgid "message_thank_you"
+msgstr "Obrigado pela avaliação!"
+
+#. Default: "Rating is disabled for this item <span>and its children</span>"
+#: ./browser/templates/settings.pt:25
+msgid "text_rating_disabled"
+msgstr "A avaliação está desativada para este item <span>e seus filhos</span>"
+
+#. Default: "A avaliação está ativada para este item <span>e seus filhos</span>"
+#: ./browser/templates/settings.pt:18
+msgid "text_rating_enabled"
+msgstr ""
