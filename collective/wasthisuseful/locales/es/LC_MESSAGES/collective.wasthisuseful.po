@@ -1,0 +1,125 @@
+# Spanish l10n collective.wasthisuseful domain.
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.wasthisuseful\n"
+"POT-Creation-Date: 2012-02-01 10:47+0000\n"
+"PO-Revision-Date: 2014-06-21 11:48-0430\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Language-Code: es\n"
+"Language-Name: Español\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.wasthisuseful\n"
+"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
+
+#: ./browser/templates/settings.pt:35
+msgid "Disable rating for this item and its children"
+msgstr "Desactivar la calificación para este elemento y sus hijos"
+
+#: ./browser/templates/settings.pt:31
+msgid "Disable rating for this item only"
+msgstr "Desactivar la opinión de este elemento solo"
+
+#: ./browser/templates/settings.pt:44
+msgid "Enable rating for this item and its children"
+msgstr "Habilitar calificación para este elemento y sus hijos"
+
+#: ./browser/templates/settings.pt:40
+msgid "Enable rating for this item only"
+msgstr "Habilitar calificación para este elemento solo"
+
+#: ./browser/useful.pt:12
+msgid "No, this information was not useful."
+msgstr "No, esta información no es útil."
+
+#: ./browser/views/settings.py:35
+msgid "Rating was disabled for this object"
+msgstr "Calificación esta deshabilitada para este elemento"
+
+#: ./browser/views/settings.py:38
+msgid "Rating was disabled for this object and its children"
+msgstr "Calificación esta deshabilitada para este elemento y sus hijos"
+
+#: ./browser/views/settings.py:41
+msgid "Rating was enabled for this object"
+msgstr "Calificación estaba habilitado para este elemento"
+
+#: ./browser/views/settings.py:44
+msgid "Rating was enabled for this object and its children"
+msgstr "Calificación esta habilitada para este elemento y sus hijos"
+
+#: ./profiles/default/controlpanel.xml
+msgid "Usefulness Ratings"
+msgstr "Calificaciones de utilidad"
+
+#: ./browser/controlpanel.py:10
+msgid "Was This Useful settings"
+msgstr "Configuraciones Was This Useful"
+
+#: ./browser/useful.pt:11
+msgid "Yes, this information was useful."
+msgstr "Sí, esta información fue útil."
+
+#. Default: "Usefulness rating settings"
+#: ./browser/templates/settings.pt:13
+msgid "heading_settings_screen"
+msgstr "Configuración Calificaciones de utilidad"
+
+#. Default: "For which content types shall we enable rating?"
+#: ./interfaces.py:35
+msgid "help_enabled_types"
+msgstr "¿Para qué tipos de contenido se permitirá calificar?"
+
+#. Default: "Comment"
+#: ./adapters.py:16
+msgid "label_comment"
+msgstr "Comentario"
+
+#. Default: "Enabled types"
+#: ./interfaces.py:34
+msgid "label_enabled_types"
+msgstr "Tipos habilitados"
+
+#. Default: "Rating"
+#: ./adapters.py:25
+msgid "label_value"
+msgstr "Calificación"
+
+#. Default: "Was this information useful?"
+#: ./browser/useful.pt:6
+msgid "label_was_this_useful"
+msgstr "¿Esta información fue útil?"
+
+#. Default: "Can you explain why it was not useful?"
+#: ./browser/useful.pt:35
+msgid "label_why"
+msgstr "¿Por favor, puede explicar por que no fue útil esta información?"
+
+#. Default: "Can you explain why it was not useful?"
+#: ./browser/useful.pt:24
+msgid "label_why_noscript"
+msgstr "¿Por favor, puede explicar por que no fue útil esta información?"
+
+#. Default: "Thank you for voting!"
+#: ./browser/views/formparser.py:35
+msgid "message_thank_you"
+msgstr "Gracias por su calificación"
+
+#. Default: "Rating is disabled for this item <span>and its children</span>"
+#: ./browser/templates/settings.pt:25
+msgid "text_rating_disabled"
+msgstr ""
+"Calificación esta deshabilitada para este elemento <span>y sus hijos<-span>"
+
+#. Default: "Rating is enabled for this item <span>e seus filhos</span>"
+#: ./browser/templates/settings.pt:18
+msgid "text_rating_enabled"
+msgstr ""
+"Calificación esta habilitada para este elemento <span>y sus hijos<-span>"
