@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1 (unreleased)
+----------------
+
+- Updated classifiers list and info for package [macagua]
+- Added Spanish translation [macagua]
+
 1.0 (2012-06-13)
 ----------------
 Stable release
