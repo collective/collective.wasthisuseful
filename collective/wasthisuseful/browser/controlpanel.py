@@ -1,7 +1,6 @@
-from plone.app.registry.browser import controlpanel
-
 from collective.wasthisuseful import wasthisusefulMessageFactory as _
 from collective.wasthisuseful.interfaces import IWasThisUsefulSettings
+from plone.app.registry.browser import controlpanel
 
 
 class WasThisUsefulSettingsEditForm(controlpanel.RegistryEditForm):
@@ -13,9 +12,9 @@ class WasThisUsefulSettingsEditForm(controlpanel.RegistryEditForm):
     def updateFields(self):
         super(WasThisUsefulSettingsEditForm, self).updateFields()
 
-
     def updateWidgets(self):
         super(WasThisUsefulSettingsEditForm, self).updateWidgets()
+
 
 class WasThisUsefulSettingsControlPanel(controlpanel.ControlPanelFormWrapper):
     form = WasThisUsefulSettingsEditForm
