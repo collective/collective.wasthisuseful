@@ -30,7 +30,8 @@ class INotUsefulForm(Interface):
 
     email = schema.TextLine(
         title=_(u'label_email',
-                default=u"Please leave your e-mail so we can contact you."),
+                default=u"Please enter your email address so we can"
+                        u" reply to your comment."),
         required=False)
 
     captcha = schema.TextLine(title=u"Captcha", required=False)
@@ -81,8 +82,7 @@ class NotUsefulForm(form.SchemaForm, WasThisUseful):
     ignoreContext = True
     useful = False
     label = _(u"Information was not useful")
-    description = _(u'label_why',
-                    default=u'Can you explain why it was not useful?')
+    description = ""
     name = "not-useful-form"
 
     def action(self):
@@ -154,7 +154,7 @@ class UsefulForm(form.SchemaForm, WasThisUseful):
     ignoreContext = True
     useful = True
     label = _(u"Information was useful")
-    description = _(u'Please submit the form to rate this as useful')
+    description = ""
     name = "useful-form"
 
     def action(self):

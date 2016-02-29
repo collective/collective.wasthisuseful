@@ -121,6 +121,6 @@ msgstr ""
 msgid "text_rating_enabled"
 msgstr ""
 
-#. Default: "Please leave your e-mail so we can contact you."
+#. Default: "Please enter your email address so we can reply to your comment."
 msgid "label_email"
-msgstr "Eventueel uw e-mail zodat we contact met u kunnen opnemen."
+msgstr "Vul alstublieft uw e-mailadres in, zodat wij kunnen reageren op uw opmerking."
