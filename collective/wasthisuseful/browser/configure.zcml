@@ -17,8 +17,15 @@
 
   <browser:page
       for="Products.CMFCore.interfaces.IContentish"
-      name="usefulness-form"
-      class=".views.formparser.FormParserView"
+      name="not-useful-form"
+      class=".views.wasthisusefulform.NotUsefulForm"
+      permission="zope2.View"
+      layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
+      />
+  <browser:page
+      for="Products.CMFCore.interfaces.IContentish"
+      name="useful-form"
+      class=".views.wasthisusefulform.UsefulForm"
       permission="zope2.View"
       layer="collective.wasthisuseful.interfaces.IWasThisUsefulProductLayer"
       />

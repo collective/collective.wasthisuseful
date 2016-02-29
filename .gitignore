@@ -27,7 +27,7 @@ fake-eggs/
 parts/
 dist/
 var/
-
+.eggs/
 
 
 # OSX

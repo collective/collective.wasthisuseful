@@ -19,6 +19,12 @@ class IUsefulnessManager(Interface):
         """Re-set the list of all votes
         """
 
+    def addVote():
+        """ Add a vote """
+
+    def getLatestVote():
+        """ The latest vote """
+
 
 class IUsefulnessSettingsManager(Interface):
     """Helper class to manage settings for object: can it be rated.

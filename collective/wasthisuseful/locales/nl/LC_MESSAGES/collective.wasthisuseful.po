@@ -121,3 +121,6 @@ msgstr ""
 msgid "text_rating_enabled"
 msgstr ""
 
+#. Default: "Please leave your e-mail so we can contact you."
+msgid "label_email"
+msgstr "Eventueel uw e-mail zodat we contact met u kunnen opnemen."

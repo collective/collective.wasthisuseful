@@ -37,6 +37,7 @@ setup(name='collective.wasthisuseful',
           # -*- Extra requirements: -*-
           'plone.browserlayer',
           'plone.app.registry',
+          'plone.formwidget.recaptcha'
       ],
       entry_points="""
       # -*- Entry points: -*-

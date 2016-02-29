@@ -6,6 +6,11 @@ Changelog
 
 - Updated classifiers list and info for package [macagua]
 - Added Spanish translation [macagua]
+- Apply flake8, ensure space indentation [puittenbroek]
+- Use z3c.forms for the useful/not-useful forms
+- Clean up code [puittenbroek]
+- Introduce recaptcha [puittenbroek]
+- Remove inline styling as much as possible [puittenbroek]
 
 1.0 (2012-06-13)
 ----------------

@@ -41,6 +41,12 @@
       factory=".adapters.usefulnessRatingValueSubstitution"
       name="usefulness_value"
       />
+  <adapter
+      for="Products.CMFCore.interfaces.IContentish"
+      provides="plone.stringinterp.interfaces.IStringSubstitution"
+      factory=".adapters.usefulnessRatingEmailSubstitution"
+      name="usefulness_email"
+      />
  
   <!-- Adapt content to ratings manager -->
   <adapter

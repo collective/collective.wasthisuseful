@@ -6,7 +6,7 @@
     padding-top: 1em;
 }
 
-.relevance a {
+.relevance a.thumbs {
     background-image: url("++resource++collective.wasthisuseful.images/thumbs.png");
     background-repeat: no-repeat;
     height: 20px;
@@ -29,6 +29,9 @@
 }
 .relevance a.down:hover {
     background-position: -50px -30px;
+}
+.relevance form {
+    display: none;
 }
 #why-not-useful input,
 #why-not-useful label {
