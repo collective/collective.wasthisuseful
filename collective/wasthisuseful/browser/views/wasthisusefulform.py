@@ -15,6 +15,7 @@ from zope import schema
 from zope.component import getMultiAdapter
 from zope.interface import Interface
 import zope.event
+from plone.protect.utils import addTokenToUrl
 
 
 class INotUsefulForm(Interface):
@@ -87,7 +88,9 @@ class NotUsefulForm(form.SchemaForm, WasThisUseful):
 
     def action(self):
         """ We nest the form, need a proper action """
-        return self.context.absolute_url() + "/@@not-useful-form"
+        url = self.context.absolute_url() + "/@@not-useful-form"
+        url = addTokenToUrl(url)
+        return url
 
     def updateFields(self):
         """ Set the ReCaptchaFieldWidget factory """
@@ -120,7 +123,7 @@ class NotUsefulForm(form.SchemaForm, WasThisUseful):
             INotUsefulForm['captcha'],
             None)
         try:
-            captcha.validate('')
+            captcha.validate(u'')
         except WrongCaptchaCode as e:
             widget = self.widgets['captcha']
             field = self.fields['captcha']
@@ -159,7 +162,9 @@ class UsefulForm(form.SchemaForm, WasThisUseful):
 
     def action(self):
         """ We nest the form, need a proper action """
-        return self.context.absolute_url() + "/@@useful-form"
+        url = self.context.absolute_url() + "/@@useful-form"
+        url = addTokenToUrl(url)
+        return url
 
     def update(self):
         """ Hide the useful field, we set it per default """
